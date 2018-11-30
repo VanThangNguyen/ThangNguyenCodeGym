@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+        Cân nặng(Kg):
+        <input type="number" id="weight"/><br/><br/>
+        Chiều cao(m):
+        <input type="number" id="height"/>
+        <input type="button" onclick="bmi()" value="Kết quả"/>
+        <br/><p id="result"></p>
+        <script>
+            function bmi() {
+                var weight = parseFloat(document.getElementById("weight").value);
+                var height = parseFloat(document.getElementById("height").value);
+                var bmi = weight / (height*height);
+                if (bmi < 18.5) {
+                    document.getElementById("result").innerHTML = "Underweight";
+                } else if (bmi < 25.0) {
+                    document.getElementById("result").innerHTML = "Normal";
+                } else if (bmi < 30.0) {
+                    document.getElementById("result").innerHTML = "Overweight";
+                } else {
+                    document.getElementById("result").innerHTML = "Obese";
+                }
+            }
+        </script>
+</body>
+</html>
