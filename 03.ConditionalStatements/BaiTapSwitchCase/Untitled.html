@@ -5,23 +5,35 @@
     <title>Thang's program</title>
 </head>
 <body>
+        <br/>
+        <input type="number" id="month"/>
+        <input type="button" onclick="cal()" value="Tính số ngày"/>
+        <br/><p id="result"></p>
         <script>
-            var year = prompt("Enter a year:");
-            var isLeapYear;
-            var isDivisibleBy4 = year%4==0;
-            var isDivisibleBy100 = year%100==0;
-            var isDivisibleBy400 = year%400==0;
-            if (isDivisibleBy4 && !isDivisibleBy100) {
-                isLeapYear = true;
-            } else if (isDivisibleBy100 && isDivisibleBy400) {
-                isLeapYear = true;
-            } else {
-                isLeapYear = false;
-            }
-            if (isLeapYear) {
-                alert(year + " is a leap year");
-            } else {
-                alert(year + " is NOT a leap year");
+            function cal() {
+                var month = parseInt(document.getElementById("month").value);
+                var result;
+                switch(month) {
+                    case 1:
+                    case 3:
+                    case 5:
+                    case 7:
+                    case 8:
+                    case 10:
+                    case 12:
+                        result = "Tháng " + month + " có 31 ngày";
+                        break;
+                    case 4:
+                    case 6:
+                    case 9:
+                    case 11:
+                        result = "Tháng " + month + " có 30 ngày";
+                        break;
+                    case 2:
+                        result = "Tháng " + month + " có 28 hoặc 29 ngày";
+                        break;
+                }
+                document.getElementById("result").innerHTML = result;
             }
         </script>
 </body>
