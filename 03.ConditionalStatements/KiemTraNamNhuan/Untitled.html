@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+        <script>
+            var year = prompt("Enter a year:");
+            var isLeapYear;
+            var isDivisibleBy4 = year%4==0;
+            var isDivisibleBy100 = year%100==0;
+            var isDivisibleBy400 = year%400==0;
+            if (isDivisibleBy4 && !isDivisibleBy100) {
+                isLeapYear = true;
+            } else if (isDivisibleBy100 && isDivisibleBy400) {
+                isLeapYear = true;
+            } else {
+                isLeapYear = false;
+            }
+            if (isLeapYear) {
+                alert(year + " is a leap year");
+            } else {
+                alert(year + " is NOT a leap year");
+            }
+        </script>
+</body>
+</html>
