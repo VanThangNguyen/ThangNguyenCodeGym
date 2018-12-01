@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <img id="img1" src="panda1.jpg" alt="Loading..." width="600" height="100" onclick="img1(this)"><br>
+    <img id="img2" src="monkey2.jpg" alt="Loading..." width="600" height="100" onclick="img2()"><br>
+    <img id="img3" src="panda3.jpg" alt="Loading..." width="600" height="100" onclick="img3()"><br>
+    <img id="img4" src="cat4.jpg" alt="Loading..." width="600" height="100" onclick="img4()">
+    <script>
+        function img1() {
+            var img = document.getElementById("img1");
+            switch(img.src) {
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat1.jpg": 
+                    img.src = "monkey1.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey1.jpg": 
+                    img.src = "panda1.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda1.jpg": 
+                    img.src = "cat1.jpg";
+                    break;
+            }
+            check();
+        }
+
+        function img2() {
+            var img = document.getElementById("img2");
+            switch(img.src) {
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat2.jpg": 
+                    img.src = "monkey2.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey2.jpg": 
+                    img.src = "panda2.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda2.jpg": 
+                    img.src = "cat2.jpg";
+                    break;
+            }
+            check();
+        }
+
+        function img3() {
+            var img = document.getElementById("img3");
+            switch(img.src) {
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat3.jpg": 
+                    img.src = "monkey3.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey3.jpg": 
+                    img.src = "panda3.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda3.jpg": 
+                    img.src = "cat3.jpg";
+                    break;
+            }
+            check();
+        }
+
+        function img4() {
+            var img = document.getElementById("img4");
+            switch(img.src) {
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat4.jpg": 
+                    img.src = "monkey4.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey4.jpg": 
+                    img.src = "panda4.jpg";
+                    break;
+                case "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda4.jpg": 
+                    img.src = "cat4.jpg";
+                    break;
+            }
+            check();
+        }
+
+        function check() {
+            var img1 = document.getElementById("img1").src;
+            var img2 = document.getElementById("img2").src;
+            var img3 = document.getElementById("img3").src;
+            var img4 = document.getElementById("img4").src;
+
+            if (img1 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat1.jpg" &&
+                img2 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat2.jpg" &&
+                img3 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat3.jpg" &&
+                img4 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/cat4.jpg" ||
+                img1 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey1.jpg" &&
+                img2 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey2.jpg" &&
+                img3 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey3.jpg" &&
+                img4 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/monkey4.jpg" ||
+                img1 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda1.jpg" &&
+                img2 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda2.jpg" &&
+                img3 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda3.jpg" &&
+                img4 == "file:///F:/CodeGym/03.ConditionalStatements/GamePuzzle/panda4.jpg") {
+                    alert("Hoàn thành!");
+                }
+        }
+    </script>
+</body>
+</html>
