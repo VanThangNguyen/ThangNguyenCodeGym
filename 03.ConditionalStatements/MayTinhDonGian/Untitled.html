@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body> 
+    <br>
+    <input type="text" id="display" value="" readonly><br><br>
+    <input type="button" value="1" onclick="process(this)">
+    <input type="button" value="2" onclick="process(this)">
+    <input type="button" value="3" onclick="process(this)">
+    <input type="button" value="+" onclick="process(this)"><br>
+    <input type="button" value="4" onclick="process(this)">
+    <input type="button" value="5" onclick="process(this)">
+    <input type="button" value="6" onclick="process(this)">
+    <input type="button" value="-" onclick="process(this)"><br>
+    <input type="button" value="7" onclick="process(this)">
+    <input type="button" value="8" onclick="process(this)">
+    <input type="button" value="9" onclick="process(this)">
+    <input type="button" value="x" onclick="process(this)"><br>
+    <input type="button" value="C" onclick="process(this)">
+    <input type="button" value="0" onclick="process(this)">
+    <input type="button" value="=" onclick="process(this)">
+    <input type="button" value="/" onclick="process(this)"><br>
+    <script>
+        var temp = '';
+        var display = '';
+        var operation = '';
+
+        function process(cal) {
+            switch(cal.value) {
+                case '1':
+                case '2':
+                case '3':
+                case '4':
+                case '5':
+                case '6':
+                case '7':
+                case '8':
+                case '9':
+                case '0':
+                    temp += cal.value;
+                    document.getElementById("display").value = temp;
+                    break;
+                case '+':
+                    if (display == '') {
+                        display = temp;
+                    } else {
+                        switch(operation) {
+                            case '+': 
+                                display = parseInt(display) + parseInt(temp) + "";
+                                break;
+                            case '-': 
+                                display = parseInt(display) - parseInt(temp) + "";
+                                break;
+                            case '*': 
+                                display = parseInt(display) * parseInt(temp) + "";
+                                break;
+                            case '/': 
+                                display = parseInt(display) / parseInt(temp) + "";
+                                break;
+                        }
+                    }
+                    temp = '';
+                    operation = '+';
+                    if (operation == '') {
+                        document.getElementById("display").value = '';
+                    } else {
+                        document.getElementById("display").value = display;
+                    }
+                    break;
+                case '-': 
+                if (display == '') {
+                        display = temp;
+                    } else {
+                        switch(operation) {
+                            case '+': 
+                                display = parseInt(display) + parseInt(temp) + "";
+                                break;
+                            case '-': 
+                                display = parseInt(display) - parseInt(temp) + "";
+                                break;
+                            case '*': 
+                                display = parseInt(display) * parseInt(temp) + "";
+                                break;
+                            case '/': 
+                                display = parseInt(display) / parseInt(temp) + "";
+                                break;
+                        }
+                    }
+                    temp = '';
+                    operation = '-';
+                    if (operation == '') {
+                        document.getElementById("display").value = '';
+                    } else {
+                        document.getElementById("display").value = display;
+                    }
+                    break;
+                case 'x':
+                if (display == '') {
+                        display = temp;
+                    } else {
+                        switch(operation) {
+                            case '+': 
+                                display = parseInt(display) + parseInt(temp) + "";
+                                break;
+                            case '-': 
+                                display = parseInt(display) - parseInt(temp) + "";
+                                break;
+                            case '*': 
+                                display = parseInt(display) * parseInt(temp) + "";
+                                break;
+                            case '/': 
+                                display = parseInt(display) / parseInt(temp) + "";
+                                break;
+                        }
+                    }
+                    temp = '';
+                    operation = 'x';
+                    if (operation == '') {
+                        document.getElementById("display").value = '';
+                    } else {
+                        document.getElementById("display").value = display;
+                    }
+                    break;
+                case '/':
+                if (display == '') {
+                        display = temp;
+                    } else {
+                        switch(operation) {
+                            case '+': 
+                                display = parseInt(display) + parseInt(temp) + "";
+                                break;
+                            case '-': 
+                                display = parseInt(display) - parseInt(temp) + "";
+                                break;
+                            case '*': 
+                                display = parseInt(display) * parseInt(temp) + "";
+                                break;
+                            case '/': 
+                                display = parseInt(display) / parseInt(temp) + "";
+                                break;
+                        }
+                    }
+                    temp = '';
+                    operation = '/';
+                    if (operation == '') {
+                        document.getElementById("display").value = '';
+                    } else {
+                        document.getElementById("display").value = display;
+                    }
+                    break;
+                case '=': 
+                    switch(operation) {
+                        case '+': 
+                            var result = parseInt(display) + parseInt(temp);
+                            temp = result;
+                            operation = '';
+                            document.getElementById("display").value = result;
+                            break;
+                        case '-': 
+                            var result = parseInt(display) - parseInt(temp);
+                            temp = result;
+                            operation = '';
+                            document.getElementById("display").value = result;
+                            break;
+                        case 'x': 
+                            var result = parseInt(display) * parseInt(temp);
+                            temp = result;
+                            operation = '';
+                            document.getElementById("display").value = result;
+                            break;
+                        case '/': 
+                            var result = parseInt(display) / parseInt(temp);
+                            temp = result;
+                            operation = '';
+                            document.getElementById("display").value = result;
+                            break;
+                    }
+                    break;
+                case 'C': 
+                    display = '';
+                    temp = '';
+                    operation = '';
+                    document.getElementById("display").value = '';
+                    break;
+            }
+        }
+    </script>
+</body>
+</html>
