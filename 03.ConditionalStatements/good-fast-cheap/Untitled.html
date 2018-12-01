@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+        <br/>
+        <input type="checkbox" id="good" onclick="good()">Good<br>
+        <input type="checkbox" id="cheap" onclick="cheap()">Cheap<br>
+        <input type="checkbox" id="fast" onclick="fast()">Fast<br>
+        <p id="test"></p>
+        <script>
+            function good() {
+                var good = document.getElementById("good").checked;
+                var cheap = document.getElementById("cheap").checked;
+                var fast = document.getElementById("fast").checked;
+                if (fast && cheap) {
+                    document.getElementById("fast").checked = false;
+                }
+            }
+
+            function cheap() {
+                var good = document.getElementById("good").checked;
+                var cheap = document.getElementById("cheap").checked;
+                var fast = document.getElementById("fast").checked;
+                if (fast && good) {
+                    document.getElementById("good").checked = false;
+                }
+            }
+
+            function fast() {
+                var good = document.getElementById("good").checked;
+                var cheap = document.getElementById("cheap").checked;
+                var fast = document.getElementById("fast").checked;
+                if (good && cheap) {
+                    document.getElementById("cheap").checked = false;
+                }
+            }
+        </script>
+</body>
+</html>
