@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        var kwh = parseFloat(prompt("Nhập vào kWh tiêu thụ:"));
+        var cuoc;
+        if (kwh <= 100) {
+            cuoc = kwh*600;
+        } else if (kwh <= 150) {
+            cuoc = 100*600 + (kwh-100)*900;
+        } else if (kwh <= 250) {
+            cuoc = 100*600 + 50*900 + (kwh-150)*1200;
+        } else {
+            cuoc = 100*600 + 50*900 + 100*1200 + (kwh-250)*1500;
+        }
+        alert("Tiền điện phải trả là " + cuoc + " đồng");
+    </script>
+</body>
+</html>
