@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <h1 style="position:absolute; left:220px; top:175px;">Do you love me?</h1>
+    <input type="button" value=" YES " onclick="yesClick()" style="position:absolute; left:285px; top:235px;">
+    <input type="button" id="btnNo" value="  NO  " onmouseover="noHover()" style="position:absolute; left:360px; top:235px;">
+    <script>
+        function yesClick() {
+            alert("Ahihi, đồ ngốc!");
+        }
+
+        function noHover() {
+            var no = document.getElementById("btnNo");
+            var rWidth = Math.random() * window.innerWidth;
+            var rHeight = Math.random() * window.innerHeight;
+            no.style.left = rWidth + "px";
+            no.style.top = rHeight + "px";
+        }
+    </script>
+</body>
+</html>
