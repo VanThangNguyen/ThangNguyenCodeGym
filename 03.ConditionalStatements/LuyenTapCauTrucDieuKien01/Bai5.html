@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        var kt = parseFloat(prompt("Nhập điểm bài kiểm tra:"));
+        var gk = parseFloat(prompt("Nhập điểm thi giữa kỳ:"));
+        var ck = parseFloat(prompt("Nhập điểm thi cuối kỳ:"));
+        var tb = (kt + gk + ck)/3;
+        if (tb >= 9.0) {
+            alert("Hạng A");
+        } else if (tb >= 7.0) {
+            alert("Hạng B");
+        } else if (tb >= 5.0) {
+            alert("Hạng C");
+        } else {
+            alert("Hạng F");
+        }
+    </script>
+</body>
+</html>

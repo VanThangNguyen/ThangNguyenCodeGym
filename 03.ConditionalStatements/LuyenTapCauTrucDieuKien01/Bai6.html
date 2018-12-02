@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        var doanhso = parseInt(prompt("Tổng doanh số bán hàng:"));
+        var hoahong;
+        if (doanhso <= 100) {
+            hoahong = doanhso*5/100;
+        } else if (doanhso <= 300) {
+            hoahong = doanhso*10/100;
+        } else {
+            hoahong = doanhso*20/100;
+        }
+        alert("Hoa hồng nhận được là " + hoahong);
+    </script>
+</body>
+</html>

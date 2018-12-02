@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        var sophut = parseInt(prompt("Số phút gọi trong tháng:"));
+        var cuoc;
+        if (sophut <= 50) {
+            cuoc = sophut*600 + 25000;
+        } else if (sophut <= 200) {
+            cuoc = 50*600 + (sophut-50)*400 + 25000;
+        } else {
+            cuoc = 50*600 + 150*400 + (sophut-200)*200 + 25000;
+        }
+        alert("Số tiền điện thoại phải nộp là " + cuoc + " đồng");
+    </script>
+</body>
+</html>
