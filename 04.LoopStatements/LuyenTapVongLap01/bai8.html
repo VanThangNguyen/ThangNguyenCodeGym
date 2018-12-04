@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <input type="button" onclick="play()" value="Chơi" style="position:absolute; left:650px; top:300px;">
+    <script>
+        function play() {
+            alert("Bạn muốn đoán trong khoảng nào?");
+            var a = parseInt(prompt("Từ:"));
+            var b = parseInt(prompt("Đến:"));
+            var rand = parseInt(Math.random()*(b-a) + a); 
+            var count = 0;
+            while (count < 3) {
+                var guess = parseInt(prompt("Bạn đoán số bao nhiêu:"));
+                if (guess == rand) {
+                    alert("Chúc mừng! Bạn đã đoán trúng");
+                    break;
+                } else if (guess > rand) {
+                    alert("Bạn đoán lớn hơn đáp án rồi!");
+                } else {
+                    alert("Bạn đoán bé thua đáp án rồi!");
+                }
+                count++;
+            }
+        }
+    </script>
+</body>
+</html>

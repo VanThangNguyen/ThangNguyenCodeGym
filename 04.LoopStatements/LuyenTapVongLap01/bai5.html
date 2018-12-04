@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        var n1 = 0, n2 = 1, n3;
+        var result = 1;
+        for (var i = 2; i <= 20; i++) {
+            n3 = n1 + n2;
+            n1 = n2;
+            n2 = n3;
+            result += n3;
+        }
+        alert("Tổng của 20 số đầu tiên trong dãy fibonacci là " + result);
+    </script>
+</body>
+</html>

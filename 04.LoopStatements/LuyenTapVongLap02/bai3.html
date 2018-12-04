@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        for (var i=0; i < 5; i++) {
+            for (var j=0; j < i+1; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (var i=5; i > 0; i--) {
+            for (var j=0; j < i; j++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (var i=0; i < 5; i++) {
+            for (var j=0; j < 5-i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (var k=0; k < i+1; k++) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+        document.write("<br>");
+        for (var i=0; i < 5; i++) {
+            for (var j=0; j < i; j++) {
+                document.write("&nbsp;&nbsp;");
+            }
+            for (var k=5; k > i; k--) {
+                document.write("*");
+            }
+            document.write("<br>");
+        }
+    </script>
+</body>
+</html>
