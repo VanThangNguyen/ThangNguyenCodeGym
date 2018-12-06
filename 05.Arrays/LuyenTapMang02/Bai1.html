@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var result = "Mảng = [<br>";
+        for (var i = 0; i < 5; i++) {
+            var tmp = [];
+            for (var j = 0; j < 5; j++) {
+                tmp.push(parseInt(Math.random()*30));
+            }
+            if (i == 4) {
+                result += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[" + tmp.join(", ") + "]<br>";
+            } else {
+                result += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;[" + tmp.join(", ") + "],<br>";
+            }
+            arr.push(tmp);
+        }
+        result += "&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;];<br>";
+        for (var m in arr) {
+            result += "row " + m + "<br>";
+            for (var n in arr[m]) {
+                result += arr[m][n] + "<br>";
+            }
+        }
+        document.write(result);
+    </script>
+</body>
+
+</html>

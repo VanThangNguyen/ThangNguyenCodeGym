@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("Nhập vào một chuỗi bất kỳ:");
+        var count = 0;
+        for (var i = 0; i < str.length; i++) {
+            var tmp = str[i].toLowerCase();
+            if (tmp == 'u' || tmp == 'e' || tmp == 'o' || tmp == 'a' || tmp == 'i') {
+                count++;
+            }
+        }
+        alert("Số nguyên âm trong chuỗi " + str + " là " + count);
+    </script>
+</body>
+
+</html>

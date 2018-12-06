@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var chars = "Ax-By-Cz";
+        var rChars = [];
+        var result;
+        for (var i = 0; i < 8; i++) {
+            var rChar = chars[Math.floor(Math.random() * chars.length)];
+            rChars.push(rChar);
+        }
+        result = "Mảng ban đầu: [" + rChars.join(', ') + "]<br>";
+        for (var j = 0; j < 8; j++) {
+            if (rChars[j] == '-') {
+                rChars[j] = '_';
+            }
+        }
+        result += "Mảng sau khi thay thế: [" + rChars.join(', ') + "]";
+        document.write(result);
+    </script>
+</body>
+
+</html>

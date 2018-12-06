@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var count = 0;
+        var result;
+        for (var i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random()*200) - 100);
+            if (arr[i] >= 10) {
+                count++;
+            }
+        }
+        result = "Các phần tử có trong mảng: [" + arr.join(", ") + "]<br>" + "Có " + count + " số nguyên lớn hơn hoặc bằng 10"; 
+        document.write(result);
+    </script>
+</body>
+
+</html>

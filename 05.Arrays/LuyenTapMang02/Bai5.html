@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var str1 = prompt("Nhập vào chuỗi thứ nhất:");
+        var str2 = prompt("Nhập vào chuỗi thứ hai:");
+        var check = true;
+        if (str1.length > str2.length || str1.length < str2.length) {
+            alert("Hai chuỗi nhập vào không giống nhau!");
+        } else {
+            for (var i = 0; i < str1.length; i++) {
+                if (str1[i] != str2[i]) {
+                    alert("Hai chuỗi nhập vào không giống nhau!");
+                    check = false;
+                    break;
+                } 
+            }
+            if (check) {
+                alert("Hai chuỗi nhập vào giống nhau!");
+            }
+        }
+    </script>
+</body>
+
+</html>

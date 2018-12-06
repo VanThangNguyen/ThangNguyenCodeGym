@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <center>
+        <form name="f">
+            <h2>Type anthing slowly</h2>
+            <textarea name="txt" id="text" cols="40" rows="10" onkeyup="typeTextarea()"></textarea>
+        </form>
+    </center>
+    <script>
+        var text = ["A", "N", "H", " ", "L", "À", " ", "V", "Ô", " ", "Đ", "Ị", "C", "H", "!"];
+        var count = 0;
+        var tmp = "";
+        function typeTextarea() {
+            document.getElementById("text").value = "";
+            if (count == text.length) {
+                tmp = "";
+                count = 0;
+            } else {
+                tmp += text[count++];
+            }
+            document.getElementById("text").value = tmp;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var rand = Math.floor(Math.random()*14) + 1;
+        var result;
+        for (var i = 0; i < 5; i++) {
+            arr.push(Math.floor(Math.random()*14) + 1);
+        }
+        result = "Các phần tử có trong mảng: [" + arr.join(", ") + "]<br>" + rand;
+        if (arr.includes(rand)) {
+            result += " có trong mảng";
+        } else {
+            result += " không có trong mảng";
+        }
+        document.write(result);
+    </script>
+</body>
+
+</html>

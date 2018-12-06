@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var max;
+        var sum = 0;
+        var result;
+        for (var i = 0; i < 10; i++) {
+            arr.push(Math.floor(Math.random()*99) + 1);
+        }
+        max = arr[0];
+        for (var i = 0; i < arr.length; i++) {
+            sum += arr[i];
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        result = "Các phần tử có trong mảng: [" + arr.join(", ") + "]<br>" + "Trong đó " + max + " là phần tử có giá trị lớn nhất<br>" + "Giá trị trung bình của các phần tử trong mảng: " + sum/10; 
+        document.write(result);
+    </script>
+</body>
+
+</html>

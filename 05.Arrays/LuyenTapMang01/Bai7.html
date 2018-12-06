@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var rand = Math.floor(Math.random()*10) + 1;
+        var result;
+        for (var i = 0; i < 5; i++) {
+            arr.push(Math.floor(Math.random()*10) + 1);
+        }
+        result = " Mảng trước khi xóa: [" + arr.join(", ") + "]<br>" + "Phần tử cần xóa: " + rand + "<br>";
+        while (arr.includes(rand)) {
+            for (var i = arr.indexOf(rand); i < arr.length-1; i++) {
+                arr[i] = arr[i+1];
+            }
+            arr.length--;
+        }
+        result += "Mảng sau khi xóa: [" + arr.join(", ") + "]";
+        document.write(result);
+    </script>
+</body>
+
+</html>

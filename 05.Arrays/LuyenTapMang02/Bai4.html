@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var str = prompt("Nhập một chuỗi bất kỳ:");
+        var count = 1;
+        if (str.length == 0) {
+            count = 0;
+        } else {
+            for (var i = 0; i < str.length; i++) {
+                if (str[i] == ' ') {
+                    count++;
+                }
+            }
+        }
+        alert("Số từ trong chuỗi này là: " + count);
+    </script>
+</body>
+
+</html>

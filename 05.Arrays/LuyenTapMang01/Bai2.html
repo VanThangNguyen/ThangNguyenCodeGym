@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arr = [];
+        var max;
+        var result;
+        var i = 0;
+        while (i < 10) {
+            var rand = Math.floor(Math.random()*19) + 1;
+            if (!arr.includes(rand)) {
+                arr.push(rand);
+                i++;
+            }
+        }
+        max = arr[0];
+        for (var i = 1; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+        }
+        result = "Các phần tử có trong mảng: [" + arr.join(", ") + "]<br>" + "Trong đó " + max + " tại vị trí " + arr.indexOf(max) +" là phần tử có giá trị lớn nhất"; 
+        document.write(result);
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <input id="search" type="text">
+    <input type="button" onclick="search()" value="Tra từ">
+    <script>
+        function search() {
+            var search = document.getElementById("search").value;
+            var eng = ["hello", "morning"];
+            var viet = ["Xin chào", "Buổi sáng"];
+            for (var i = 0; i < eng.length; i++) {
+                if (search == eng[i]) {
+                    alert("Nghĩa của từ " + search + " là " + viet[i]);
+                    break;
+                }
+                if (i == eng.length-1) {
+                    alert("Không tìm thấy từ " + search);
+                }
+            }
+
+        }
+    </script>
+</body>
+</html>

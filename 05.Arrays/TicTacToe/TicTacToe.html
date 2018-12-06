@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <h1>Tic Tac Toe</h1>
+    <hr align="left" width="30%">
+    <p id="board"></p>
+    <input type="button" onclick="play()" value="Change Value">
+    <script>
+        var b = document.getElementById("board");
+        var board = [];
+        var count = 0;
+        for (var i = 0; i < 5; i++) {
+            board[i] = new Array('.', '.', '.', '.', '.');
+        }
+        display();
+
+        function display() {
+            var display = "";
+            for (var i in board) {
+                display += board[i].join("&nbsp;&nbsp;&nbsp;&nbsp;") + "<br>";
+            }
+            b.innerHTML = display;
+        }
+
+        function play() {
+            var x = parseInt(prompt("X:"));
+            var y = parseInt(prompt("Y:"));
+            if (count % 2 == 0) {
+                board[y-1][x-1] = "X";
+            } else {
+                board[y-1][x-1] = "O";
+            }
+            count++;
+            display();
+            check(y-1, x-1);
+        }
+
+        function check(x, y) {
+            var countX = 0;
+            var countO = 0;
+            if (y >= 2) {
+                for (var i = 0; i < 3; i++) {
+                    if (board[x][y-i] == 'X') {
+                        countX++;
+                    }
+                    if(board[x][y-i] == 'O') {
+                        countO++;
+                    }
+                }
+                if (countX == 3) {
+                    alert("X chiến thắng!");
+                } else if (countO == 3) {
+                    alert("O chiến thắng!");
+                } else {
+                    countX = 0;
+                    countO = 0;
+                }
+                if (x >= 2) {
+                    for (var i = 0; i < 3; i++) {
+                        if (board[x-i][y-i] == 'X') {
+                            countX++;
+                        }
+                        if(board[x-i][y-i] == 'O') {
+                            countO++;
+                        }
+                    }
+                    if (countX == 3) {
+                        alert("X chiến thắng!");
+                    } else if (countO == 3) {
+                        alert("O chiến thắng!");
+                    } else {
+                        countX = 0;
+                        countO = 0;
+                    }
+                }
+                if (x <= 2) {
+                    for (var i = 0; i < 3; i++) {
+                        if (board[x+i][y-i] == 'X') {
+                            countX++;
+                        }
+                        if(board[x+i][y-i] == 'O') {
+                            countO++;
+                        }
+                    }
+                    if (countX == 3) {
+                        alert("X chiến thắng!");
+                    } else if (countO == 3) {
+                        alert("O chiến thắng!");
+                    } else {
+                        countX = 0;
+                        countO = 0;
+                    }
+                }
+            }
+            if (y <= 2) {
+                for (var i = 0; i < 3; i++) {
+                    if (board[x][y+i] == 'X') {
+                        countX++;
+                    }
+                    if(board[x][y+i] == 'O') {
+                        countO++;
+                    }
+                }
+                if (countX == 3) {
+                    alert("X chiến thắng!");
+                } else if (countO == 3) {
+                    alert("O chiến thắng!");
+                } else {
+                    countX = 0;
+                    countO = 0;
+                }
+                if (x <= 2) {
+                    for (var i = 0; i < 3; i++) {
+                        if (board[x+i][y+i] == 'X') {
+                            countX++;
+                        }
+                        if(board[x+i][y+i] == 'O') {
+                            countO++;
+                        }
+                    }
+                    if (countX == 3) {
+                        alert("X chiến thắng!");
+                    } else if (countO == 3) {
+                        alert("O chiến thắng!");
+                    } else {
+                        countX = 0;
+                        countO = 0;
+                    }
+                }
+                if (x >= 2) {
+                    for (var i = 0; i < 3; i++) {
+                        if (board[x-i][y+i] == 'X') {
+                            countX++;
+                        }
+                        if(board[x-i][y+i] == 'O') {
+                            countO++;
+                        }
+                    }
+                    if (countX == 3) {
+                        alert("X chiến thắng!");
+                    } else if (countO == 3) {
+                        alert("O chiến thắng!");
+                    } else {
+                        countX = 0;
+                        countO = 0;
+                    }
+                }
+            }
+            if (x >= 2) {
+                for (var i = 0; i < 3; i++) {
+                    if (board[x-i][y] == 'X') {
+                        countX++;
+                    }
+                    if(board[x-i][y] == 'O') {
+                        countO++;
+                    }
+                }
+                if (countX == 3) {
+                    alert("X chiến thắng!");
+                } else if (countO == 3) {
+                    alert("O chiến thắng!");
+                } else {
+                    countX = 0;
+                    countO = 0;
+                }
+            }
+            if (x <= 2) {
+                for (var i = 0; i < 3; i++) {
+                    if (board[x+i][y] == 'X') {
+                        countX++;
+                    }
+                    if(board[x+i][y] == 'O') {
+                        countO++;
+                    }
+                }
+                if (countX == 3) {
+                    alert("X chiến thắng!");
+                } else if (countO == 3) {
+                    alert("O chiến thắng!");
+                } else {
+                    countX = 0;
+                    countO = 0;
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>
