@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        function isPrime(number) {
+            for (var i = 2; i <= Math.sqrt(number); i++) {
+                if (number % i == 0) {
+                    return false;
+                }
+            }
+            return true;
+        }
+
+        var result = "Các số nguyên tố nhỏ hơn 10000:<br>";
+        for (var j = 2; j < 10000; j++) {
+            if (isPrime(j)) {
+                result += j + " ";
+            }
+        }
+        document.write(result);
+    </script>
+</body>
+</html>

@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var arrayName = ["Polaris", "Aldebaran", "Deneb", "Vega", "Altair", "Dubhe", "Regulus"];
+        var arrayStar = ["Ursa Minor", "Tarurus", "Cygnus", "Lyra", "Aquila", "Ursa Major", "Leo"];
+        function find(name) {
+            var star = "Không tìm thấy tên của ngôi sao!";
+            if (arrayName.includes(name)) {
+                star = "Tên chòm sao của ngôi sao " + name + " là " + arrayStar[arrayName.indexOf(name)];
+            }
+            return star;
+        } 
+        var name = prompt("Nhập vào tên của ngôi sao:");
+        alert(find(name));
+    </script>
+</body>
+
+</html>

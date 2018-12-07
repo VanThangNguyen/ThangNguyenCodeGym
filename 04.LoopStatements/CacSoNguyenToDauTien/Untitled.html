@@ -13,11 +13,11 @@
         while (count < numbers) {
             if (isPrime(n)) {
                 count++;
-                result += n + " ";
+                result += n + "</br>";
             }
             n++;
         }
-        alert(result);
+        document.write(result);
 
         function isPrime(n) {
             for (var i=2; i <= Math.sqrt(n); i++) {

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        function checkInput(a, b) {
+            var result;
+            if (a > b) {
+                result = "a lớn hơn b!";
+            } else {
+                result = "Tổng của hai tham số là " + (a + b);
+            }
+            return result;
+        }
+        var a = parseFloat(prompt("Nhập tham số thứ nhất:"));
+        var b = parseFloat(prompt("Nhập tham số thứ hai:"));
+        alert(checkInput(a, b));
+    </script>
+</body>
+</html>

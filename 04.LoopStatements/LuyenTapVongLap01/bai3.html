@@ -8,15 +8,41 @@
 
 <body>
     <script>
-        var result = "1 ";
-        var n1 = 0, n2 = 1, n3;
-        for (var i = 2; i <= 20; i++) {
-            n3 = n1 + n2;
+        var numbers = parseInt(prompt("Nhap gioi han day Fibonacci:"));
+        var n1 = 1;
+        var n2 = 1;
+        var results = [n1, n2];
+        for (var i = 2; i < numbers; i ++) {
+            var currentFibonacciNumb = n1 + n2;
+            results.push(currentFibonacciNumb);
             n1 = n2;
-            n2 = n3;
-            result += n3 + " ";
+            n2 = currentFibonacciNumb;
         }
-        alert("20 số đầu tiên trong dãy fibonacci là " + result);
+
+        for (index in results) {
+            document.write(results[index] + "</br>");
+        }
+        document.write("********************* </br>");
+        for (var i = 0; i < results.length; i++) {
+            document.write(results[i] + "</br>");
+        }
+        document.write("************CHIA HET CHO 5********* </br>");
+        for (var i = 0; i < results.length; i++) {
+            if (results[i] % 5 == 0) {
+                document.write(results[i] + "- INDEX - " + i + "</br>");
+                break;
+            }
+        }
+
+        // var result = "1 ";
+        // var n1 = 0, n2 = 1, n3;
+        // for (var i = 2; i <= 20; i++) {
+        //     n3 = n1 + n2;
+        //     n1 = n2;
+        //     n2 = n3;
+        //     result += n3 + " ";
+        // }
+        // alert("20 số đầu tiên trong dãy fibonacci là " + result);
     </script>
 </body>
 
