@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function checkSmallestNumber(character) {
+            character = character.toLowerCase();
+            if (character == 'u' || character == 'e' || character == 'o' || character == 'a' || character == 'i') {
+                return true;
+            }
+            return false;
+        }
+
+        var character = prompt("Nhập vào một ký tự bất kỳ trong bảng chữ cái [a-z][A-Z]:");
+        if (checkSmallestNumber(character)) {
+            alert("Ký tự nhập vào là nguyên âm");
+        } else {
+            alert("Ký tự nhập vào không là nguyên âm");
+        }
+    </script>
+</body>
+
+</html>

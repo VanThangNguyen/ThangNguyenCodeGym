@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function calculateFactorial(number) {
+            var factorial = 1;
+            for (var i = 2; i <= number; i++) {
+                factorial *= i;
+            }
+            return factorial;
+        }
+
+        var number = parseInt(prompt("Nhập vào một số nguyên bất kỳ:"));
+        alert(number + "! = " + calculateFactorial(number));
+    </script>
+</body>
+
+</html>

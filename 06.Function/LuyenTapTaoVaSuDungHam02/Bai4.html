@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function isNumber(character) {
+            for (var i = 0; i < 10; i++) {
+                if (character == i) {
+                    return true;
+                }
+            }
+            return false;
+        }
+
+        var character = prompt("Nhập vào một ký tự bất kỳ:");
+        if (isNumber(character)) {
+            alert("Ký tự nhập vào là số!");
+        } else {
+            alert("Ký tự nhập vào không phải là số!");
+        }
+    </script>
+</body>
+
+</html>

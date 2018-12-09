@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function isPalindrome(s) {
+            var strLen = s.length;
+            if (strLen == 0 || strLen == 1) {
+                return true;
+            }
+
+            if (s[0] != s[strLen-1]) {
+                return false;
+            } 
+
+            return isPalindrome(s.substring(1, strLen-1));;
+        }
+
+        var s = prompt("Nhập vào một từ bất kỳ:");
+        if (isPalindrome(s)) {
+            alert(s + " là từ đối xứng");
+        } else {
+            alert(s + " không là từ đối xứng");
+        }
+    </script>
+</body>
+
+</html>

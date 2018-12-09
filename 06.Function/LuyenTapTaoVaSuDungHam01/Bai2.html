@@ -6,13 +6,11 @@
 </head>
 <body>
     <script>
-        function feetToMeter(feet) {
-            return 0.305 * feet;
+        function increaseArgument(input) {
+            return input+1;
         }
-        
-        function meterToFeet(meter) {
-            return 3.279 * meter;
-        }
+        var input = parseFloat(prompt("Nhập một đối số bất kỳ:"));
+        alert("Kết quả sau khi gọi hàm: " + increaseArgument(input));
     </script>
 </body>
 </html>

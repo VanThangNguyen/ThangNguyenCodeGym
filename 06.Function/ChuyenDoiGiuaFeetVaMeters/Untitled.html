@@ -5,14 +5,18 @@
     <title>Thang's program</title>
 </head>
 <body>
-    <script>
-        function feetToMeter(feet) {
-            return 0.305 * feet;
-        }
-        
-        function meterToFeet(meter) {
-            return 3.279 * meter;
-        }
-    </script>
+        <input type="number" oninput="feetToMeter(this.value)">feet = <span id="feetToMeter"></span> meter<br><br>
+        <input type="number" oninput="meterToFeet(this.value)">meter = <span id="meterToFeet"></span> feet
+        <script>
+            function feetToMeter(feet) {
+                var meter = 0.305 * feet;
+                document.getElementById("feetToMeter").innerHTML = meter;
+            }
+            
+            function meterToFeet(meter) {
+                var feet = 3.279 * meter;
+                document.getElementById("meterToFeet").innerHTML = feet;
+            }
+        </script>
 </body>
 </html>

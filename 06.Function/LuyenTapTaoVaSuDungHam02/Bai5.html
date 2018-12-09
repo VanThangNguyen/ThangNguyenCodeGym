@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function checkSmallestNumber(number1, number2, number3) {
+            var min = number1;
+            if (min > number2) {
+                min = number2;
+            }
+            if (min > number3) {
+                min = number3;
+            }
+            return min;
+        }
+
+        var number1 = parseInt(prompt("Nhập số nguyên thứ nhất:"));
+        var number2 = parseInt(prompt("Nhập số nguyên thứ hai:"));
+        var number3 = parseInt(prompt("Nhập số nguyên thứ ba:"));
+        alert("Số nguyên có giá trị nhỏ nhất trong 3 số " + number1 + ", " + number2 + ", " + number3 + " là: " + checkSmallestNumber(number1, number2, number3));
+    </script>
+</body>
+
+</html>

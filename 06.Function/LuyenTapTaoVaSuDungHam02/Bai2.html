@@ -8,9 +8,17 @@
 
 <body>
     <script>
-        function area() {
-            
+        function area(radius) {
+            return Math.PI * radius * radius;
         }
+        function circum() {
+            return Math.PI * 2 * radius;
+        }
+
+        var radius = parseFloat(prompt("Nhập vào bán kính hình tròn:"));
+        document.write("Bán kính hình tròn: " + radius + 
+                       "<br>Chu vi hình tròn: " + circum(radius) +
+                       "<br>Diện tích hình tròn: " + area(radius));
     </script>
 </body>
 

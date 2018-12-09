@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+<body>
+    <script>
+        function displayProducts() {
+            var display =   '<input id="addProduct" type="text">' +
+                            '<input type="button" value="Thêm" onclick="addProduct()"><br><br>' +
+                            '<input id="editProduct" type="text" value="">' +
+                            '<input type="button" value="Sửa" onclick="editProduct()"><br><br>' +
+                            '<table border="1" width="500" cellspacing="0" cellpadding="3">' +
+                            '<tr>' + 
+                            '<td>STT</td>' +
+                            '<td>Tên sản phẩm</td>' +
+                            '<td></td>' +
+                            '</tr>';
+            for (var i=1; i <= products.length; i++) {
+                display +=  "<tr border='1' cellspacing='0'>"+ 
+                            "<td>" + i + "</td>" +
+                            "<td onclick='toEditProduct(this)'>" + products[i-1] + "</td>" +
+                            "<td><input type='button' value='Xóa' onclick='deleteProduct(this)'></td>" +
+                            "</tr>";
+            }
+            display += "</table>";
+            document.open();
+            document.write(display);
+        }
+
+        function addProduct() {
+            var product = document.getElementById("addProduct").value;
+            if (product == '') {
+                alert("Vui lòng nhập tên sản phẩm!");
+            } else {
+                products.push(product);
+                alert("Thêm thành công!");
+                displayProducts();
+            }
+        }
+
+        function toEditProduct(cur) {
+            var index = cur.parentNode.rowIndex-1;
+            indexEditProduct = index;
+            document.getElementById("editProduct").value = products[index];
+        }
+
+        function editProduct() {
+            var product = document.getElementById("editProduct").value;
+            products[indexEditProduct] = product;
+            displayProducts();
+        }
+
+        function deleteProduct(cur) {
+            var index = cur.parentNode.parentNode.rowIndex-1;
+            for (var i = index; i < products.length-1; i++) {
+                products[i] = products[i+1]; 
+            }
+            products.length--;
+            displayProducts();
+        }
+
+        var products = ["Sữa tươi Vinamilk", "Chinsu", "Hảo Hảo"];
+        var indexEditProduct;
+        displayProducts();
+    </script>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function isCharacterInArray(array, character){
+            if (array.includes(character)) {
+                var count = 0;
+                for (var i = 0; i < array.length; i++) {
+                    if (character == array[i]) {
+                        count++;
+                    }
+                }
+                return count;
+            }
+            return -1;
+        }
+    </script>
+</body>
+
+</html>

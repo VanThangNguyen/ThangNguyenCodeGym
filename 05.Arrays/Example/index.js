@@ -43,7 +43,10 @@ for (index in names) {
 }
 document.write("*********Mang 2 chieu*************</br>");
 var scores = [1, 2, 3, 4, 5, 6, 7];
-var students = new Array(7, 7);
+var students = new Array(2);
+for (var i = 0; i < students.length; i++) {
+    students[i] = new Array(7);
+}
 for (var i = 0; i < names.length; i++) {
     students[0][i] = names[i];
     students[1][i] = scores[i];
