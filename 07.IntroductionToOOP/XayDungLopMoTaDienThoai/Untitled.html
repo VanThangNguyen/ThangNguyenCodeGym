@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var Mobile = function() {
+            this.inbox = [];
+            
+            this.texting = function(message) {
+                this.draft = message;
+            }
+
+            this.send = function(mobile) {
+                mobile.inbox.push(this.draft);
+            }
+            
+            this.showInbox = function() {
+                console.log(this.inbox);
+            }
+        };
+
+        var nokia = new Mobile();
+        var iphone = new Mobile();
+
+        nokia.texting("Hello Iphone!");
+        nokia.send(iphone);
+
+        iphone.showInbox();
+    </script>
+</body>
+
+</html>

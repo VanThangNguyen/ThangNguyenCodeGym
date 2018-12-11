@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var Temperature = function(celcius) {
+            this.celcius = celcius;
+
+            this.getFahrenheit = function() {
+                return this.celcius * 1.8 + 32;
+            }
+
+            this.getKelvin = function() {
+                return this.celcius + 273.15;
+            }
+        };
+
+        var temperature = new Temperature(25);
+        console.log("25℃ = " + temperature.getFahrenheit() + "℉");
+        console.log("25℃ = " + temperature.getKelvin() + "K");
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<script>
+    // var message1 = prompt("Nhap vao mot noi dung de hien thi: ");
+    // var message2 = prompt("Nhap vao mot noi dung khac de hien thi tren man hinh:")
+    // showMessage(message1);
+    // showMessage(message2);
+
+    // var sum = sum(10, 100);
+    // showMessage("Tong cua hai so 10 va 100 la: " + sum);
+    
+    showMessage("So 15 la so " + checkEvenOdd(15), true);
+    showMessage("So 10 la so " + checkEvenOdd(10), true);
+
+    function showMessage(message, isBreakLine = false) {
+        if (isBreakLine) {
+            document.write(message + "<br>");
+        } else {
+            document.write(message);
+        }
+    }
+
+
+    function sum(a, b) {
+        return a + b;
+    }
+
+    function checkEvenOdd(number) {
+        var result = "chan";
+        if (number % 2 !== 0) {
+            result = "le";
+        }
+        return result;
+    }
+
+
+    // Pass-By-Value
+    function swap(number1, number2) {
+        var temp = number1;
+        number1 = number2;
+        number2 = temp;
+        showMessage("Gia tri cua Number 1 trong Swap la: " + number1, true);
+        showMessage("Gia tri cua Number 2 trong Swap la: " + number2, true);
+    }
+
+    function testSwap() {
+        var numb1 = 1;
+        var numb2 = 2;
+
+        swap(numb1, numb2);
+
+        showMessage("Gia tri cua Number 1 sau Swap la: " + numb1, true);
+        showMessage("Gia tri cua Number 2 sau Swap la: " + numb2, true);
+    }
+
+    testSwap();
+</script>

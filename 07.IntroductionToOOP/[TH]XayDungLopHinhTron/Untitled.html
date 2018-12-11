@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var Circle = function(radius) {
+            this.radius = radius
+
+            this.getRadius = function() {
+                return radius;
+            }
+
+            this.getArea = function() {
+                return Math.PI * radius * radius;
+            }
+        };
+
+        var circle = new Circle(2);
+        var circle1 = new Circle(3);
+
+        var radius = circle.getRadius();
+        var area = circle.getArea();
+
+        var radius1 = circle1.getRadius();
+        var area1 = circle1.getArea();
+
+        alert("radius: " + radius + "; area: " + area);
+        alert("radius: " + radius1 + "; area: " + area1);
+    </script>
+</body>
+
+</html>
