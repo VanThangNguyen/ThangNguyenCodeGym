@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function Apple() {
+            this.weight = 10;
+            
+            this.decrease = function() {
+                this.weight--;
+            }
+
+            this.isEmpty = function() {
+                if (this.weight < 1) {
+                    return true;
+                }
+                return false;
+            }
+
+            this.getWeight = function() {
+                return this.weight;
+            }
+        }
+
+        function Human() {
+            this.isMale = function() {
+                return this.gender;
+            }
+
+            this.setGender = function(isMale) {
+                if (isMale) {
+                    this.gender = true;
+                } else {
+                    this.gender = false;
+                }
+            }
+
+            this.checkApple = function(apple) {
+                if (apple.isEmpty()) {
+                    return false;
+                }
+                return true;
+            }
+
+            this.eat = function(apple) {
+                if (this.checkApple(apple)) {
+                    console.log(this.name + " ăn cái nhẹ!");
+                    apple.decrease();
+                    this.weight++;
+                }
+            }
+
+            this.say = function(something) {
+                console.log(something);
+            }
+
+            this.getName = function() {
+                return this.name;
+            }
+
+            this.setName = function(name) {
+                this.name = name;
+            }
+
+            this.getWeight = function(weight) {
+                return this.weight;
+            }
+
+            this.setWeight = function(weight) {
+                this.weight = weight;
+            }
+        }
+
+        var apple = new Apple();
+        var adam = new Human();
+        adam.setName("Adam");
+        adam.setWeight(96);
+        adam.setGender(true);
+        var eva = new Human();
+        eva.setName("Eva");
+        eva.setWeight(69);
+        eva.setGender(true);
+        eva.say("Khối lượng của táo trước khi bị ăn: " + apple.getWeight());
+        adam.say("Cân nặng của Adam trước khi ăn táo: " + adam.getWeight());
+        eva.say("Cân nặng của Eva trước khi ăn táo: " + eva.getWeight());
+        while (adam.checkApple(apple)) {
+            adam.eat(apple);
+            eva.eat(apple);
+        }
+        adam.say("Cân nặng của Adam sau khi ăn táo: " + adam.getWeight());
+        eva.say("Cân nặng của Eva sau khi ăn táo: " + eva.getWeight());
+        adam.say("Khối lượng của táo sau khi bị ăn: " + apple.getWeight());
+    </script>
+</body>
+
+</html>

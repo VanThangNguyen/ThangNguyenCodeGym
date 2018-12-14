@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function ElectricLamp() {
+            this.turnOff = function() {
+                this.status = false;
+            }
+
+            this.turnOn = function() {
+                this.status = true;
+            }
+        }
+
+        function SwitchButton() {
+            this.connectToLamp = function(electricLamp) {
+                this.lamp = electricLamp;
+            }
+
+            this.switchOff = function() {
+                this.status = false;
+                this.lamp.turnOff();
+            }
+
+            this.switchOn = function() {
+                this.status = true;
+                this.lamp.turnOn();
+            }
+        }
+
+        var lamp = new ElectricLamp();
+        var button = new SwitchButton();
+        button.connectToLamp(lamp);
+        for (var i = 0; i < 10; i++) {
+            if (button.status) {
+                button.switchOff();
+            } else {
+                button.switchOn();
+            }
+        }
+        console.log("Lamp status: " + lamp.status);
+        console.log("Button status: " + button.status);
+    </script>
+</body>
+
+</html>

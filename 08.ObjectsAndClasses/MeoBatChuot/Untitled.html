@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function Rat(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+            this.isAlive = true;
+
+            this.say = function() {
+                console.log("Tôi là " + this.name + ", nặng " + this.weight + "kg và có tốc độ chạy " + this.speed + "km/h");
+            };
+        }
+
+        function Cat(name, weight, speed) {
+            this.name = name;
+            this.weight = weight;
+            this.speed = speed;
+
+            this.say = function() {
+                console.log("Tôi là " + this.name + ", nặng " + this.weight + "kg và có tốc độ chạy " + this.speed + "km/h");
+            };
+
+            this.catchRat = function(rat) {
+                if (this.speed > rat.speed) {
+                    console.log("Bắt chuột thành công!");
+                } else {
+                    console.log("Bắt chuột thất bại!");
+                }
+            };
+
+            this.eatRat = function(rat) {
+                if (rat.isAlive) {
+                    this.weight++;
+                    rat.isAlive = false;
+                }
+            };
+        }
+
+        var tom = new Cat("Tom", 96,  96);
+        var jerry = new Rat("Jerry", 69, 69);
+        console.log(tom);
+        console.log(jerry);
+        tom.say();
+        jerry.say();
+        tom.catchRat(jerry);
+        tom.eatRat(jerry);
+        console.log(tom);
+        console.log(jerry);
+    </script>
+</body>
+
+</html>
