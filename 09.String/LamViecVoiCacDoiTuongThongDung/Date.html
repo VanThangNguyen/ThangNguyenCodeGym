@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var myBirthDay = new Date("June 23 1997");
+        var now = new Date();
+        var result =    "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear()) + " năm<br>" +
+                        "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear())*12 + " tháng<br>" +
+                        "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear())*12*30 + " ngày<br>" +
+                        "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear())*12*30*24 + " giờ<br>" +
+                        "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear())*12*30*24*60 + " phút<br>" +
+                        "Tôi đã sống " + (now.getFullYear() - myBirthDay.getFullYear())*12*30*24*60*60 + " giây";
+        document.write(result);
+    </script>
+</body>
+
+</html>

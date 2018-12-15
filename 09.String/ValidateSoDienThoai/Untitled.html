@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <input type="text" oninput="validatePhoneNumber(this.value)">
+    <p id="result"></p>
+    <script>
+        function validatePhoneNumber(phoneNumber) {
+            var patt = /^\(\d{2}\)\-\(0\d{9}\)$/;
+            var result = "Số điện thoại không hợp lệ!";
+            if (patt.test(phoneNumber)) {
+                result = "Số điện thoại hợp lệ!";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

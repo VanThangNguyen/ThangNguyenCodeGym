@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var str = "Tôi yêu ngôn ngữ lập trình Javascript";
+        var count = 0;
+        for (var i = 0; i < str.length; i++) {
+            if (str[i] == 'a') {
+                count++;
+            }
+        }
+        var array = str.split(" ");
+        var res = str.replace("Javascript", "Typescript");
+        var result = str + "<br>Số lần xuất hiện của chữ 'a' ở trong chuỗi trên: " + count +
+                            "<br>[" + array.join(", ") + "]" +
+                            "<br>Số lượng từ có trong chuỗi trên: " + array.length +
+                            "<br>" + res;
+        document.write(result);
+    </script>
+</body>
+
+</html>

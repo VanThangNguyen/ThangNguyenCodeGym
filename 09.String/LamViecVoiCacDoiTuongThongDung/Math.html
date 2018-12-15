@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var randNumFrom0To10 = Math.floor(Math.random()*11);
+        var randNumFrom0To400 = Math.floor(Math.random()*401);
+        var randNumFrom50To100 = Math.floor(Math.random()*51) + 50;
+        var result = "Sinh số ngẫu nhiên từ 0-10: " + randNumFrom0To10 +
+                        "<br>Sinh số ngẫu nhiên từ 0-400: " + randNumFrom0To400 +
+                        "<br>Sinh số ngẫu nhiên từ 50-100: " +randNumFrom50To100 +
+                        "<br>Giá trị nhỏ nhất trong các số 5, 7, 2, 9: " + Math.min(5, 7 , 2, 9) +
+                        "<br>Diện tích của hình tròn có bán kính là 5cm: " + Math.PI * 5 * 5 ;
+        document.write(result);
+    </script>
+</body>
+
+</html>

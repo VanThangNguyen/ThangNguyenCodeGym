@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <input type="text" oninput="validateClassName(this.value)">
+    <p id="result"></p>
+    <script>
+        function validateClassName(className) {
+            var patt = /^[CAP]\d{4}[GHIKLM]$/;
+            var result = "Tên lớp học không hợp lệ!";
+            if (patt.test(className)) {
+                result = "Tên lớp học hợp lệ!";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

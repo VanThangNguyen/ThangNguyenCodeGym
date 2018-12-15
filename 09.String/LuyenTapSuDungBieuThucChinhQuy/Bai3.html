@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <input type="text" oninput="count(this.value)">
+    <p id="vowel"></p>
+    <p id="consonant"></p>
+    <script>
+        function count(str) {
+            var regExVowel = /[ueoai]/g;
+            var regExConsonant = /[^ueoai\s]/g;
+            var countVowel = 0;
+            var countConsonant = 0;
+            var vowel = str.match(regExVowel);
+            var consonant = str.match(regExConsonant);
+            if (str.length > 0) {
+                if (vowel != null) {
+                    countVowel = vowel.length;
+                }
+                if (consonant != null) {
+                    countConsonant = consonant.length;
+                }
+            }
+            document.getElementById("vowel").innerHTML = "Số lượng nguyên âm: " + countVowel;
+            document.getElementById("consonant").innerHTML = "Số lượng phụ âm: " + countConsonant;
+        }
+    </script>
+</body>
+
+</html>

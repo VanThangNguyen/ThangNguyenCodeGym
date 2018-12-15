@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <input type="text" oninput="validateEmail(this.value)">
+    <p id="result"></p>
+    <script>
+        function validateEmail(email) {
+            var patt = /^[a-zA-Z0-9]+@[a-zA-Z0-9]+(\.[a-zA-Z]+)+$/;
+            var result = "Email không hợp lệ!";
+            if (patt.test(email)) {
+                result = "Email hợp lệ!";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>

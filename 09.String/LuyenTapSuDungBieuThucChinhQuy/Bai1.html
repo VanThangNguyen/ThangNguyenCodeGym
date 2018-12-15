@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <input type="text" oninput="validateDate(this.value)">
+    <p id="result"></p>
+    <script>
+        function validateDate(date) {
+            var patt = /^\d{2}\/\d{2}\/\d{4}$/;
+            var result = "Chuỗi đưa vào không đúng dạng dd/mm/yyyy!";
+            if (patt.test(date)) {
+                result = "Chuỗi đưa vào đúng dạng dd/mm/yyyy!!";
+            }
+            document.getElementById("result").innerHTML = result;
+        }
+    </script>
+</body>
+
+</html>
