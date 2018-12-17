@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        function linearSearch(arr, data) {
+            for (var i = 0; i < arr.length; i++) {
+                if (arr[i] == data) {
+                    console.log(i+1 + "th guess: " + arr[i] + ", Answer: Correct");
+                    break;
+                } else if (arr[i] > data) {
+                    console.log(i+1 + "th guess: " + arr[i] + ", Answer: Too high");
+                } else {
+                    console.log(i+1 + "th guess: " + arr[i] + ", Answer: Too low");
+                }
+            }
+        }
+
+        function binarySearch(arr, data) {
+            var left = 0;
+            var right = arr.length - 1;
+            var count = 0;
+            while (left < right) {
+                var mid = parseInt(left + (right-left)/2);
+                if (arr[mid] == data) {
+                    console.log(count+1 + "th guess: " + arr[mid] + ", Answer: Correct");
+                    break;
+                } else if (arr[mid] > data) {
+                    console.log(count+1 + "th guess: " + arr[mid] + ", Answer: Too high");
+                    count++;
+                    right = mid - 1;
+                } else {
+                    console.log(count+1 + "th guess: " + arr[mid] + ", Answer: Too low");
+                    count++;
+                    left = mid + 1;
+                }
+            }
+            
+        }
+
+        var arr = [1, 25, 50, 75, 82, 100];
+        var secretNumber = arr[Math.floor(Math.random()*6)];
+        console.log("Linear search:\n");
+        linearSearch(arr, 82);
+        console.log("-------------------------------");
+        console.log("Binary search:\n");
+        binarySearch(arr, 82);
+    </script>
+</body>
+
+</html>

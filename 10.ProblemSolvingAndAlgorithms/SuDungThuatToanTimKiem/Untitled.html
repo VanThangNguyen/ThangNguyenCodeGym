@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Thang's program</title>
+</head>
+
+<body>
+    <script>
+        var phoneNumbers = ["0123456789", "0369696969", "0123456036"];
+        var regEx = /^03[2-9]\d{7}$/;
+        for (var i = 0; i < phoneNumbers.length; i++) {
+            if (regEx.test(phoneNumbers[i])) {
+                console.log(phoneNumbers[i]);
+            }
+        }
+    </script>
+</body>
+
+</html>
